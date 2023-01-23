@@ -134,7 +134,13 @@ const ContactForm = () => {
 					/>
 				</div>
 				<div>
-					<Button shadow color="success" onClick={formSubmit} auto>
+					<Button
+						shadow
+						color="success"
+						onClick={formSubmit}
+						size="lg"
+						style={{ width: '80%' }}
+					>
 						Submit
 					</Button>
 				</div>
