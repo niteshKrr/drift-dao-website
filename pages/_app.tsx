@@ -6,7 +6,7 @@ import type { AppProps } from 'next/app';
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
-    <>
+    <div style={{ backgroundColor:"#170034"}}>
       <Head>
         <title>Drift-DAO</title>
         <meta charSet="UTF-8" />
@@ -44,6 +44,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <NextUIProvider>
         <Component {...pageProps} />
       </NextUIProvider>
-    </>
+    </div>
   );
 }
