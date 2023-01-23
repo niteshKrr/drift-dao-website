@@ -1,39 +1,44 @@
-import React from 'react'
+import React from "react";
 import { Card, Grid, Row, Text } from "@nextui-org/react";
+import Image from "next/image";
 
-const CardComponent = () => {
-  const list = [
-    {
-      title: "Orange",
-      price: "$5.50",
-    },
-  ];
+type CardComponentProp = {
+  name: string;
+  email: string;
+  twitter: string;
+};
 
-
+const CardComponent = ({name,email,twitter}: CardComponentProp) => {
   return (
-    <Grid.Container gap={2}>
-      {list.map((item, index) => (
-        <Grid sm={3} key={index}>
-          <Card isPressable>
-            <Card.Body css={{ p: 0 }}>
-              <Card.Image
-                src={"/images/team/nitesh.jpeg" }
-                objectFit="cover"
-                width="100%"
-                height={140}
-                alt={item.title}
-              />
-            </Card.Body>
-            <Card.Footer css={{ justifyItems: "flex-start" }}>
-              <Row wrap="wrap" justify="space-between" align="center">
-                <Text b>{item.title}</Text>
-                
-              </Row>
-            </Card.Footer>
-          </Card>
-        </Grid>
-      ))}
-    </Grid.Container>
+    <div style={{ width: "350px", height: "350px" }}>
+      <Card isPressable>
+        <Card.Body>
+          <Image
+            src={"/images/team/nitesh.jpeg"}
+            width="350"
+            height="350"
+            alt="image"
+          />
+        </Card.Body>
+        <Card.Footer css={{ justifyItems: "flex-start" }}>
+          <Row wrap="wrap" justify="space-between" align="center">
+            <div className="font-bold text-2xl tracking-tight text-purple-900">
+              {name}
+            </div>
+            <a href={`mailto: ${email}`}>
+              <div className="font-normal text-pink-500 my-2">
+                email: {email}
+              </div>
+            </a>
+            <a href={`https://twitter.com/${twitter}`} target="_blank">
+              <div className="font-normal text-purple-900 my-2">
+                twitter: {twitter}
+              </div>
+            </a>
+          </Row>
+        </Card.Footer>
+      </Card>
+    </div>
   );
 };
 

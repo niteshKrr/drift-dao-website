@@ -11,7 +11,6 @@ export default function Home() {
       <HomeComponent />
       <ProductCompinents />
       <TeamComponent />
-      <CardComponent />
       <ContactComponent/>
     </div>
   );
