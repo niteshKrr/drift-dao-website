@@ -1,13 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 import { Navbar, Dropdown, Button } from "@nextui-org/react";
 
 const NavbarComponent = () => {
-
   const router = useRouter();
   const onBoardDAO = () => {
-    router.push('/onBoardDAO');
+    router.push("/onBoardDAO");
   };
 
   return (
@@ -22,11 +21,10 @@ const NavbarComponent = () => {
         maxWidth="fluid"
         variant="static"
         height="65px"
-
         css={{
           bgColor: "#170034",
           $$navbarBackgroundColor: "transparent",
-          $$navbarBlurBackgroundColor: "transparent"
+          $$navbarBlurBackgroundColor: "transparent",
         }}
       >
         <Navbar.Toggle showIn="xs" />
@@ -69,10 +67,10 @@ const NavbarComponent = () => {
             auto
             className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-bold"
           >
-            <div className="px-3 font-bold">Onboard DAO 🚀🔥</div>
+            <div className="font-bold">Onboard DAO 🚀🔥</div>
           </Button>
         </Navbar.Content>
-        <Navbar.Collapse style={{color:"white"}}>
+        <Navbar.Collapse style={{ color: "white" }}>
           <div className="my-4">
             <Link href="#home">Home</Link>
           </div>
