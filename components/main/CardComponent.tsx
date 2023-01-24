@@ -10,7 +10,7 @@ type CardComponentProp = {
 
 const CardComponent = ({ name, email, twitter }: CardComponentProp) => {
 	return (
-		<div style={{ width: '350px', height: '350px' }}>
+		<div className="max-w-sm m-auto py-6"  style={{ width: '350px', height: '350px' }}>
 			<Card isPressable>
 				<Card.Body>
 					<Image

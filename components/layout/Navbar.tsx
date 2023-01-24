@@ -1,8 +1,15 @@
 import React from "react";
 import Link from "next/link";
+import { useRouter } from 'next/router';
 import { Navbar, Dropdown, Button } from "@nextui-org/react";
 
 const NavbarComponent = () => {
+
+  const router = useRouter();
+  const onBoardDAO = () => {
+    router.push('/onBoardDAO');
+  };
+
   return (
     <div
       style={{
@@ -58,17 +65,26 @@ const NavbarComponent = () => {
         </Navbar.Content>
         <Navbar.Content>
           <Button
+            onClick={onBoardDAO}
             auto
             className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-bold"
           >
-            <div className="px-4 font-bold">Gradient</div>
+            <div className="px-3 font-bold">Onboard DAO 🚀🔥</div>
           </Button>
         </Navbar.Content>
-        <Navbar.Collapse>
-          <Link href="#contact">Contact us</Link>
-          <Link href="#home">Home</Link>
-          <Link href="#product">About</Link>
-          <Link href="#team">Our team</Link>
+        <Navbar.Collapse style={{color:"white"}}>
+          <div className="my-4">
+            <Link href="#home">Home</Link>
+          </div>
+          <div className="my-4">
+            <Link href="#product">About</Link>
+          </div>
+          <div className="my-4">
+            <Link href="#team">Our team</Link>
+          </div>
+          <div className="my-4">
+            <Link href="#contact">Contact us</Link>
+          </div>
         </Navbar.Collapse>
       </Navbar>
     </div>
